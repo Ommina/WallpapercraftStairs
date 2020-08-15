@@ -28,7 +28,7 @@ minecraft {
     mappings channel: 'snapshot', version: '20190719-1.14.3'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
-    // accessTransformer = file('build/resources/main/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -77,7 +77,11 @@ repositories {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
+    } // C:\Users\Lloyd\McModDev-1.14\WallpaperCraft\mcmodsrepo
+    maven {
+        url 'file:../mcmodsrepo'
     }
+
 }
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
@@ -90,6 +94,8 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.13:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.13")
+
+    compile fg.deobf("net.ommina.wallpapercraft:WallpaperCraft:1.0.7")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
@@ -143,7 +149,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file:///${project.projectDir}/mcmodsrepo"
+            url "file:../mcmodsrepo"
         }
     }
 }
