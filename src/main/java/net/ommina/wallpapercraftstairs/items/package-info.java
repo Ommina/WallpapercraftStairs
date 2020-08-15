@@ -1,7 +1,7 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 
-package net.ommina.wallpapercraftssp.blocks;
+package net.ommina.wallpapercraftstairs.items;
 
 import mcp.MethodsReturnNonnullByDefault;
 

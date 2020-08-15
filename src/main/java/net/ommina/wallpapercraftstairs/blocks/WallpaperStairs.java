@@ -1,4 +1,4 @@
-package net.ommina.wallpapercraftssp.blocks;
+package net.ommina.wallpapercraftstairs.blocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;

@@ -1,4 +1,4 @@
-package net.ommina.wallpapercraftssp.items;
+package net.ommina.wallpapercraftstairs.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -7,11 +7,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 import net.ommina.wallpapercraft.Wallpapercraft;
 import net.ommina.wallpapercraft.items.DecorativeItem;
-import net.ommina.wallpapercraftssp.WallpapercraftSSP;
-import net.ommina.wallpapercraftssp.blocks.ModBlocks;
+import net.ommina.wallpapercraftstairs.WallpapercraftStairs;
+import net.ommina.wallpapercraftstairs.blocks.ModBlocks;
 
 @Mod.EventBusSubscriber( bus = Mod.EventBusSubscriber.Bus.MOD )
-@ObjectHolder( WallpapercraftSSP.MODID )
+@ObjectHolder( WallpapercraftStairs.MODID )
 public class ModItems {
 
     @SubscribeEvent

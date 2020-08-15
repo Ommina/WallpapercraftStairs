@@ -1,5 +1,4 @@
-package net.ommina.wallpapercraftssp.blocks;
-
+package net.ommina.wallpapercraftstairs.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -7,8 +6,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
+
 import net.ommina.wallpapercraft.Wallpapercraft;
-import net.ommina.wallpapercraftssp.WallpapercraftSSP;
+import net.ommina.wallpapercraftstairs.WallpapercraftStairs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -44,11 +44,11 @@ public class ModBlocks {
                     Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) );
 
                     if ( sourceBlock == null )
-                        WallpapercraftSSP.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
+                        WallpapercraftStairs.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
                     else {
 
                         Block block = new WallpaperStairs( sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
-                        block.setRegistryName( WallpapercraftSSP.getId( name ) );
+                        block.setRegistryName( WallpapercraftStairs.getId( name ) );
 
                         event.getRegistry().register( block );
                         STAIRS_BLOCKS.put( name, block );
@@ -73,11 +73,11 @@ public class ModBlocks {
         Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) );
 
         if ( sourceBlock == Blocks.AIR )
-            WallpapercraftSSP.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
+            WallpapercraftStairs.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
         else {
 
             Block block = new WallpaperStairs( sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
-            block.setRegistryName( WallpapercraftSSP.getId( name ) + "_stairs" );
+            block.setRegistryName( WallpapercraftStairs.getId( name ) + "_stairs" );
 
             event.getRegistry().register( block );
             STAIRS_BLOCKS.put( name, block );
