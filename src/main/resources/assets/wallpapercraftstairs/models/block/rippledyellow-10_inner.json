@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/rippled/rippledyellow-10",
+        "top": "wallpapercraft:block/rippled/rippledyellow-10",
+        "side": "wallpapercraft:block/rippled/rippledyellow-10"
+    }
+}
+

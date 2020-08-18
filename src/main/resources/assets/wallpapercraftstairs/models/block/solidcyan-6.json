@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/solid/solidcyan-6",
+        "top": "wallpapercraft:block/solid/solidcyan-6",
+        "side": "wallpapercraft:block/solid/solidcyan-6"
+    }
+}
+

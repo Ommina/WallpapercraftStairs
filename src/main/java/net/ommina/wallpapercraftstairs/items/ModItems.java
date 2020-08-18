@@ -18,7 +18,7 @@ public class ModItems {
     public static void registerItems( final RegistryEvent.Register<Item> event ) {
 
         ModBlocks.STAIRS_BLOCKS.keySet().stream().sorted().forEachOrdered( s ->
-             event.getRegistry().register( new DecorativeItem( ModBlocks.STAIRS_BLOCKS.get( s ), new Item.Properties().group( Wallpapercraft.TAB ) ).setRegistryName( s + "_stairs" ) )
+             event.getRegistry().register( new DecorativeItem( ModBlocks.STAIRS_BLOCKS.get( s ), new Item.Properties().group( Wallpapercraft.TAB ) ).setRegistryName( s  ) )
         );
 
     }

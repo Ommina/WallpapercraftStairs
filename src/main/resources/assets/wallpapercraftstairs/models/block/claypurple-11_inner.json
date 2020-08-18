@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/clay/claypurple-11",
+        "top": "wallpapercraft:block/clay/claypurple-11",
+        "side": "wallpapercraft:block/clay/claypurple-11"
+    }
+}
+

@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/checkeredwool/checkeredwoolred-1",
+        "top": "wallpapercraft:block/checkeredwool/checkeredwoolred-1",
+        "side": "wallpapercraft:block/checkeredwool/checkeredwoolred-1"
+    }
+}
+

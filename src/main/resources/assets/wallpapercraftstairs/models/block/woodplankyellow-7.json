@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/woodplank/woodplankyellow-7",
+        "top": "wallpapercraft:block/woodplank/woodplankyellow-7",
+        "side": "wallpapercraft:block/woodplank/woodplankyellow-7"
+    }
+}
+

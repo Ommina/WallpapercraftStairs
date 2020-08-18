@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/fancytiles/fancytilesred-2",
+        "top": "wallpapercraft:block/fancytiles/fancytilesred-2",
+        "side": "wallpapercraft:block/fancytiles/fancytilesred-2"
+    }
+}
+

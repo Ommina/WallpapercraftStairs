@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/wool/woolbrown-7",
+        "top": "wallpapercraft:block/wool/woolbrown-7",
+        "side": "wallpapercraft:block/wool/woolbrown-7"
+    }
+}
+

@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/colouredbrick/colouredbrickblue-1",
+        "top": "wallpapercraft:block/colouredbrick/colouredbrickblue-1",
+        "side": "wallpapercraft:block/colouredbrick/colouredbrickblue-1"
+    }
+}
+

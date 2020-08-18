@@ -1,12 +1,10 @@
 package net.ommina.wallpapercraftstairs.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
-
 import net.ommina.wallpapercraft.Wallpapercraft;
 import net.ommina.wallpapercraftstairs.WallpapercraftStairs;
 
@@ -18,17 +16,11 @@ public class ModBlocks {
 
     public static final String[] COLOURS = { "blue", "brown", "cyan", "gray", "green", "purple", "red", "yellow" };
     public static final String[] STAIRS = { "solid", "brick", "checkeredwool", "clay", "colouredbrick",
-         "damask", "diagonallydotted", "dotted", "fancytiles", "floral", "jewel", "rippled", "stamp", "stonebrick", "striped", "woodplank", "wool" };
+         "damask", "diagonallydotted", "dotted", "fancytiles", "floral", "rippled", "stonebrick", "striped", "woodplank", "wool" };
 
     public static final Map<String, Block> STAIRS_BLOCKS = new HashMap<String, Block>();
 
     @SubscribeEvent
-    public static void registerBlocks( final RegistryEvent.Register<Block> event ) {
-
-        registerStairs2( event );
-
-    }
-
     private static void registerStairs( final RegistryEvent.Register<Block> event ) {
 
         for ( String pattern : STAIRS ) {
@@ -57,30 +49,6 @@ public class ModBlocks {
 
                 }
             }
-
-        }
-
-    }
-
-    private static void registerStairs2( final RegistryEvent.Register<Block> event ) {
-
-        String pattern = "wool";
-        String colour = "yellow";
-        int suffix = 0;
-
-        String name = getName( pattern, colour, suffix );
-
-        Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) );
-
-        if ( sourceBlock == Blocks.AIR )
-            WallpapercraftStairs.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
-        else {
-
-            Block block = new WallpaperStairs( sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
-            block.setRegistryName( WallpapercraftStairs.getId( name ) + "_stairs" );
-
-            event.getRegistry().register( block );
-            STAIRS_BLOCKS.put( name, block );
 
         }
 

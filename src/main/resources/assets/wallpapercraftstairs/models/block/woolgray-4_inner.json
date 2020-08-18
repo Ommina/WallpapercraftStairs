@@ -1,0 +1,9 @@
+﻿{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "wallpapercraft:block/wool/woolgray-4",
+        "top": "wallpapercraft:block/wool/woolgray-4",
+        "side": "wallpapercraft:block/wool/woolgray-4"
+    }
+}
+
