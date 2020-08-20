@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:fancytilescyan-3"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:fancytilescyan-3",
+    "count": 4
+  }
+}

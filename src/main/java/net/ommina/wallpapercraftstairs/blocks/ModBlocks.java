@@ -21,7 +21,7 @@ public class ModBlocks {
     public static final Map<String, Block> STAIRS_BLOCKS = new HashMap<String, Block>();
 
     @SubscribeEvent
-    private static void registerStairs( final RegistryEvent.Register<Block> event ) {
+    public static void registerStairs( final RegistryEvent.Register<Block> event ) {
 
         for ( String pattern : STAIRS ) {
 

@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:colouredbrickblue-2"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:colouredbrickblue-2",
+    "count": 4
+  }
+}

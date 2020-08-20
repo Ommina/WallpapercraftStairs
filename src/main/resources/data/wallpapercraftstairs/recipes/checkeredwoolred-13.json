@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:checkeredwoolred-13"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:checkeredwoolred-13",
+    "count": 4
+  }
+}

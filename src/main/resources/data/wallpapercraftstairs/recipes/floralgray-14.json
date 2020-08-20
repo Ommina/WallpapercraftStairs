@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:floralgray-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:floralgray-14",
+    "count": 4
+  }
+}

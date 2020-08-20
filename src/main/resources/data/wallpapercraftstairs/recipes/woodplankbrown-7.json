@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:woodplankbrown-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:woodplankbrown-7",
+    "count": 4
+  }
+}

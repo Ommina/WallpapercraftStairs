@@ -77,7 +77,7 @@ repositories {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.k-4u.nl"
-    } // C:\Users\Lloyd\McModDev-1.14\WallpaperCraft\mcmodsrepo
+    } 
     maven {
         url 'file:../mcmodsrepo'
     }

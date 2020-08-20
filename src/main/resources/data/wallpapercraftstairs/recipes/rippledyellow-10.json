@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:rippledyellow-10"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:rippledyellow-10",
+    "count": 4
+  }
+}

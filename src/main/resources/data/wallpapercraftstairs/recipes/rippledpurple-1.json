@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:rippledpurple-1"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:rippledpurple-1",
+    "count": 4
+  }
+}

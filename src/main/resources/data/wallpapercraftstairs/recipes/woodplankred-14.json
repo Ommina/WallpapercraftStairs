@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:woodplankred-14"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:woodplankred-14",
+    "count": 4
+  }
+}

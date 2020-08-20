@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:dottedcyan-9"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:dottedcyan-9",
+    "count": 4
+  }
+}

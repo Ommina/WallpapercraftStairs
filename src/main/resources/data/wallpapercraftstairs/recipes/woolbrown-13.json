@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:woolbrown-13"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:woolbrown-13",
+    "count": 4
+  }
+}

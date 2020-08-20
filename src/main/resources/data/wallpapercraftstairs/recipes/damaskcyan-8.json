@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:damaskcyan-8"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:damaskcyan-8",
+    "count": 4
+  }
+}

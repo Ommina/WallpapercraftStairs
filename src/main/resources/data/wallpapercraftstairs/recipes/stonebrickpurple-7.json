@@ -1,0 +1,18 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "group": "wallpapercraft_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "wallpapercraft:stonebrickpurple-7"
+    }
+  },
+  "result": {
+    "item": "wallpapercraftstairs:stonebrickpurple-7",
+    "count": 4
+  }
+}
