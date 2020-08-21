@@ -1,0 +1,20 @@
+﻿{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pressblank",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "wallpapercraft:pressblank"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+﻿{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pressauralamp",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "wallpapercraft:pressauralamp"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}
