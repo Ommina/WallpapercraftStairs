@@ -18,7 +18,7 @@ public class ModBlocks {
     public static final String[] STAIRS = { "solid", "brick", "checkeredwool", "clay", "colouredbrick",
          "damask", "diagonallydotted", "dotted", "fancytiles", "floral", "rippled", "stonebrick", "striped", "woodplank", "wool" };
 
-    public static final Map<String, Block> STAIRS_BLOCKS = new HashMap<String, Block>();
+    public static final Map<String, WallpaperStairBlock> STAIRS_BLOCKS = new HashMap<String, WallpaperStairBlock>();
 
     @SubscribeEvent
     public static void registerStairs( final RegistryEvent.Register<Block> event ) {
@@ -39,7 +39,7 @@ public class ModBlocks {
                         WallpapercraftStairs.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
                     else {
 
-                        Block block = new WallpaperStairs( sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
+                        WallpaperStairBlock block = new WallpaperStairBlock( pattern, colour, suffix, sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
                         block.setRegistryName( WallpapercraftStairs.getId( name ) );
 
                         event.getRegistry().register( block );

@@ -55,9 +55,9 @@ Wallpapercraft - Stairs
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 
-[[dependencies.wallpapercraftssp]]
+[[dependencies.wallpapercraftstairs]]
     modId="wallpapercraft"
     mandatory=true
-    versionRange="[1.0.7]"
+    versionRange="[1.0.7,1.1.0)"
     ordering="NONE"
     side="BOTH"
