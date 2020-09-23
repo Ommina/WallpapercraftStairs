@@ -5,7 +5,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.Hand;
 import net.minecraftforge.fml.network.NetworkEvent;
-import net.ommina.wallpapercraft.items.DecorativeItem;
 import net.ommina.wallpapercraft.util.MathUtil;
 import net.ommina.wallpapercraftstairs.blocks.ModBlocks;
 import net.ommina.wallpapercraftstairs.blocks.WallpaperStairBlock;
