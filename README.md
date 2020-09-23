@@ -1,4 +1,4 @@
-# WallpaperCraft
+# Wallpapercraft - Stairs!
 
 ## Table of Contents
 
