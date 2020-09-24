@@ -2,6 +2,7 @@ package net.ommina.wallpapercraftstairs.blocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
+import net.ommina.wallpapercraft.blocks.IDecorativeBlock;
 
 public class WallpaperStairBlock extends StairsBlock implements IDecorativeBlock {
 
@@ -9,8 +10,8 @@ public class WallpaperStairBlock extends StairsBlock implements IDecorativeBlock
     private final String colour;
     private final String suffix;
 
-    public WallpaperStairBlock( final String pattern, final String colour, final int suffix, BlockState p_i48321_1_, Properties p_i48321_2_ ) {
-        super( p_i48321_1_, p_i48321_2_ );
+    public WallpaperStairBlock( final String pattern, final String colour, final int suffix, BlockState blockState, Properties properties ) {
+        super( blockState, properties );
 
         this.pattern = pattern;
         this.colour = colour;
