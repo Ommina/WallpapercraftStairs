@@ -1,21 +1,26 @@
 package net.ommina.wallpapercraftstairs.blocks;
 
-import net.minecraft.block.*;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.ommina.wallpapercraft.blocks.IDecorativeBlock;
 import net.ommina.wallpapercraft.blocks.InWorldHelper;
 import net.ommina.wallpapercraft.items.ModItems;
 import net.ommina.wallpapercraft.items.PressColour;
 import net.ommina.wallpapercraft.items.PressVariant;
 import net.ommina.wallpapercraft.sounds.ModSoundType;
+import net.ommina.wallpapercraftstairs.WallpapercraftStairs;
 
 import javax.annotation.Nullable;
 
-public class WallpaperStairBlock extends StairsBlock implements IDecorativeBlock {
+public class WallpaperStairBlock extends StairBlock implements IDecorativeBlock {
 
     private static final String POSTFIX = "";
 
@@ -33,6 +38,10 @@ public class WallpaperStairBlock extends StairsBlock implements IDecorativeBlock
     }
 
     //region Overrides
+    @Override
+    public void attack( final BlockState state, final Level world, final BlockPos pos, final Player player ) {
+        onBlockClicked( state, world, pos, player );
+    }
 
     @Override
     public String getPostfix() {
@@ -60,48 +69,47 @@ public class WallpaperStairBlock extends StairsBlock implements IDecorativeBlock
     }
 
     @Override
-    public SoundType getSoundType( final BlockState state, final IWorldReader world, final BlockPos pos, @Nullable final Entity entity ) {
+    public SoundType getSoundType( final BlockState state, final LevelReader world, final BlockPos pos, @Nullable final Entity entity ) {
 
-        if ( !(entity instanceof PlayerEntity) )
+        if ( !(entity instanceof Player) )
             return SoundType.STONE;
 
-        final PlayerEntity player = (PlayerEntity) entity;
+        final Player player = (Player) entity;
 
-        if ( player.getHeldItemMainhand().isEmpty() )
+        if ( player.getMainHandItem().isEmpty() )
             return SoundType.STONE;
 
-        if ( player.getHeldItemMainhand().getItem() == ModItems.PAINTBRUSH || player.getHeldItemMainhand().getItem() instanceof PressColour || player.getHeldItemMainhand().getItem() instanceof PressVariant )
+        if ( player.getMainHandItem().getItem() == ModItems.PAINTBRUSH || player.getMainHandItem().getItem() instanceof PressColour || player.getMainHandItem().getItem() instanceof PressVariant )
             return ModSoundType.BLOCK_CHANGE;
 
         return SoundType.STONE;
 
     }
+//endregion Overrides
 
-    @Override
-    public void onBlockClicked( final BlockState state, final World world, final BlockPos pos, final PlayerEntity player ) {
+    public void onBlockClicked( final BlockState state, final Level level, final BlockPos pos, final Player player ) {
 
         Block block = Blocks.AIR;
 
-        if ( player.getHeldItemMainhand().getItem() == ModItems.PAINTBRUSH )
+        if ( player.getMainHandItem().getItem() == ModItems.PAINTBRUSH )
             block = InWorldHelper.getIncrementedBlockColour( this );
-        else if ( player.getHeldItemMainhand().getItem() instanceof PressColour )
-            block = InWorldHelper.getBlockFromColourPress( this, (PressColour) player.getHeldItemMainhand().getItem() );
-        else if ( player.getHeldItemMainhand().getItem() instanceof PressVariant )
-            block = InWorldHelper.getBlockFromVariantPress( this, (PressVariant) player.getHeldItemMainhand().getItem() );
+        else if ( player.getMainHandItem().getItem() instanceof PressColour )
+            block = InWorldHelper.getBlockFromColourPress( this, (PressColour) player.getMainHandItem().getItem() );
+        else if ( player.getMainHandItem().getItem() instanceof PressVariant )
+            block = InWorldHelper.getBlockFromVariantPress( this, (PressVariant) player.getMainHandItem().getItem() );
 
-        if ( block == Blocks.AIR )
+        if ( block == Blocks.AIR || !block.getRegistryName().getNamespace().equalsIgnoreCase( WallpapercraftStairs.MODID ) )
             return;
 
-        BlockState newState = block.getStateContainer().getBaseState()
-             .with( StairsBlock.FACING, state.get( StairsBlock.FACING ) )
-             .with( StairsBlock.HALF, state.get( StairsBlock.HALF ) )
-             .with( StairsBlock.SHAPE, state.get( StairsBlock.SHAPE ) )
-             .with( StairsBlock.WATERLOGGED, state.get( StairsBlock.WATERLOGGED ) );
+        BlockState newState = block.defaultBlockState()
+             .setValue( StairBlock.FACING, state.getValue( StairBlock.FACING ) )
+             .setValue( StairBlock.HALF, state.getValue( StairBlock.HALF ) )
+             .setValue( StairBlock.SHAPE, state.getValue( StairBlock.SHAPE ) )
+             .setValue( StairBlock.WATERLOGGED, state.getValue( StairBlock.WATERLOGGED ) );
 
-        if ( !world.isRemote )
-            world.setBlockState( pos, newState, 3 );
+        if ( !level.isClientSide )
+            level.setBlock( pos, newState, 3 );
 
     }
-//endregion Overrides
 
 }

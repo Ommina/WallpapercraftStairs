@@ -1,6 +1,6 @@
 package net.ommina.wallpapercraftstairs.blocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -33,13 +33,13 @@ public class ModBlocks {
 
                     String name = getName( pattern, colour, suffix );
 
-                    Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) );
+                    Block sourceBlock = ForgeRegistries.BLOCKS.getValue( Wallpapercraft.getId( name ) ); // Yes, this SHOULD be "Wallpapercraft".
 
                     if ( sourceBlock == null )
                         WallpapercraftStairs.LOGGER.warn( "Source block not found: " + name + " -- unable to create stairs for it.  Panic!  This shouldn't happen!" );
                     else {
 
-                        WallpaperStairBlock block = new WallpaperStairBlock( pattern, colour, suffix, sourceBlock.getDefaultState(), Block.Properties.from( sourceBlock ) );
+                        WallpaperStairBlock block = new WallpaperStairBlock( pattern, colour, suffix, sourceBlock.defaultBlockState(), Block.Properties.copy( sourceBlock ) );
                         block.setRegistryName( WallpapercraftStairs.getId( name ) );
 
                         event.getRegistry().register( block );

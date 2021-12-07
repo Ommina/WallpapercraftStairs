@@ -1,7 +1,7 @@
 package net.ommina.wallpapercraftstairs;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -19,7 +19,7 @@ public class WallpapercraftStairs {
     public static final String MODID = "wallpapercraftstairs";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final ItemGroup STAIRS_TAB = new CreativeTab();
+    public static final CreativeModeTab STAIRS_TAB = new CreativeTab();
 
     public WallpapercraftStairs() {
 
